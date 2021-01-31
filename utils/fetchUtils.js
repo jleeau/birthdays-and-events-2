@@ -1,9 +1,11 @@
 import fetch from 'node-fetch';
 
-export const requestHandler = async (url, fields) => {
+export const requestHandler = async (url, fields = null) => {
     try {
-        let params = { fields: fields };
-        Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+        if (fields) {
+            let params = fields;
+            Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+        }
 
         let res = await fetch(url, {
             method: `GET`,
@@ -11,14 +13,14 @@ export const requestHandler = async (url, fields) => {
                 accept: `application/json`
             }
         });
-        
+
         if (res.status === 200) {
             return await res.json();
         } else {
             console.log(`Failed to fetch from BambooHR (${res.status}): ${res.headers.get('X-BambooHR-Error-Message')}`);
-            return null;       
+            return null;
         }
-    } catch(err) {
+    } catch (err) {
         console.log('Error encountered: ' + err);
         return null;
     }

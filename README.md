@@ -6,8 +6,8 @@ To be scheduled daily via Heroku.
 
 
 ## TODO
-- Pull in birthdays, work anniversaries, holidays, annual leave (who's out?)
-- Configure daily message - birthdays, work anniversaries
+- Pull in birthdays, work anniversaries, new starters, holidays, annual leave (who's out?)
+- Configure daily message - birthdays, work anniversaries, new starters
 - Configure weekly message - public holidays, who's out
 - Build messaging helper
 - Connect to Slack channel
