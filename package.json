@@ -1,0 +1,19 @@
+{
+  "name": "birthdays-and-events-2",
+  "version": "1.0.0",
+  "description": "V2 of app to automate birthdays/events from Shield BambooHR into Slack",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jleeau/birthdays-and-events-2.git"
+  },
+  "author": "Jacky Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jleeau/birthdays-and-events-2/issues"
+  },
+  "homepage": "https://github.com/jleeau/birthdays-and-events-2#readme"
+}
