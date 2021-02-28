@@ -49,3 +49,14 @@ node app.js
 ```
 git push origin --delete master
 ```
+
+## Pushing to heroku
+```
+heroku login
+heroku git:remote -a limitless-coast-xxxxx  // To set the heroku remote in current project
+git push heroku main                        // Assuming changes have already been pushed to main
+```
+
+
+## Changing Slack Channel
+Edit the .env file to point to a different Slack webhook. Each webhook is associated with a single channel in a single Slack org. You can change environment variables directly from Heroku dashboard.
