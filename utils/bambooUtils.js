@@ -1,4 +1,4 @@
-import { requestHandler } from './fetchUtils.js';
+import { requestHandler, requestHandlerSlack } from './fetchUtils.js';
 import dotenv from 'dotenv';        // Import .env for use here
 dotenv.config();
 
@@ -26,12 +26,22 @@ export const getEmployee = async (employeeId) => {
 export const getHolidays = async () => {
     let url = new URL(bambooURL + `time_off/whos_out/`);
     let fields = {
-        start: `2020-12-24`,
+        start: `2021-12-24`,
         end: `2020-12-26`
     }
 
     try {
         return await requestHandler(url, fields);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+export const postToSlack = async (message) => {
+    const url = process.env.SLACK_WEBHOOK;
+
+    try {
+        return await requestHandlerSlack(url, message);
     } catch (err) {
         console.log(err);
     }
