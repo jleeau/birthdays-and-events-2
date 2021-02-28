@@ -1,6 +1,6 @@
 import { getEmployee, getHolidays, postToSlack } from './utils/bambooUtils.js';
 
-console.log(`Starting...`);
+console.log(`Starting at ${new Date()}...`);
 
 let main = async () => {
     // Fetch list of every employee
@@ -11,6 +11,7 @@ let main = async () => {
         for (let employee of dir.employees) {
             employeeIds.push(employee.id);
         }
+        console.log(`Found ${employeeIds.length} employees.`);
 
         // Go through each employee and check if they're worth posting for birthday/work anniversary
         let birthdays = [];
