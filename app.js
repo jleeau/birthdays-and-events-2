@@ -102,10 +102,10 @@ let createPost = (employees, type) => {
 let buildSlackMessage = (name, type) => {
     let post;
     if (type === 'birthday') {
-        post = `@channel *Happy Birthday to ${name}*!
+        post = `<!channel> *Happy Birthday to ${name}*!
         :clapping::star2::tada::birthday::balloon:    Hope you have a great day!    :star2::tada::birthday::balloon::clapping:`;
     } else if (type === 'anniversary') {
-        post = `@channel *Happy Work Anniversary to ${name}*!
+        post = `<!channel> *Happy Work Anniversary to ${name}*!
         :clapping::sparkles::champagne::star2::100::star:    Great to have you on the team!    :sparkles::champagne::star2::100::star::clapping:`;
     }
 
